@@ -1,6 +1,7 @@
-module Lib
-    ( someFunc
-    ) where
+module Lib (getInput, readInt) where
 
-someFunc :: IO ()
-someFunc = putStrLn "someFunc"
+getInput :: String -> IO String
+getInput str = readFile $ "input/" ++ str 
+
+readInt :: String -> Int
+readInt str = read str :: Int
